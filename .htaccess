@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteOptions Inherit
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
