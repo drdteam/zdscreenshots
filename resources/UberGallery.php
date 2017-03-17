@@ -129,7 +129,7 @@ class UberGallery {
         echo '    <ul id="galleryList" class="clearfix">' . PHP_EOL;
         
         foreach ($gallery['images'] as $image) {
-            echo "            <li><a href=\"{$image['file_path']}\" title=\"{$image['file_title']}\" rel=\"{$relText}\"><img src=\"cache/{$image['thumb_path']}\" alt=\"{$image['file_title']}\"/></a></li>" . PHP_EOL;
+            echo "            <li><a href=\"{$image['file_path']}\" title=\"{$image['file_title']}\" rel=\"{$relText}\"><img src=\"{$image['thumb_path']}\" alt=\"{$image['file_title']}\"/></a></li>" . PHP_EOL;
         }
         
         echo '    </ul>' . PHP_EOL;
@@ -464,7 +464,7 @@ class UberGallery {
         
         // If file already exists return relative path to thumbnail
         if (file_exists($destination)) {
-            $relativePath = $this->_rThumbsDir . '/' . $fileName;
+            $relativePath = 'cache/' . $fileName;
             return $relativePath;
         }
         
@@ -503,7 +503,7 @@ class UberGallery {
         }
         
         // Return relative path to thumbnail
-        $relativePath = $this->_rThumbsDir . '/' . $fileName;
+        $relativePath = 'cache/' . $fileName;
         return $relativePath;
     }
     
