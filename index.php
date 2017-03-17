@@ -16,13 +16,13 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="resources/colorbox/jquery.colorbox.js"></script>
     
-    <script type="text/javascript">
+    <!--script type="text/javascript">
     $(document).ready(function(){
         $("a[rel='cats']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});
         $("a[rel='dogs']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});
         $("a[rel='misc']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});
     });
-    </script>
+    </script-->
     
     <?php if(file_exists('googleAnalytics.inc')) { include('googleAnalytics.inc'); } ?>
 
